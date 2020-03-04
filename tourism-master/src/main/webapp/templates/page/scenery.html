@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<title>Hotels</title>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Your description"/>
+<meta name="keywords" content="Your keywords"/>
+<meta name="author" content="Your name"/>
+  <script src="/js/cform.js" th:src="@{/js/cform.js}"></script>
+</head>
+<body class="not-front page-pages page-hotels">
+
+<div id="main">
+  <!-- head 头部 -->
+  <div id="head" th:include="common/index_header :: copy"></div>
+
+<div class="breadcrumbs1_wrapper">
+  <div class="container">
+    <div class="breadcrumbs1"><a href="#">Home</a><span>/</span><a href="#">Pages</a><span>/</span>景点推荐</div>
+  </div>
+</div>
+
+
+<div id="content">
+  <div class="container">
+
+    <div class="tabs_wrapper tabs1_wrapper">
+      <div class="tabs tabs2">
+        <div class="tabs_tabs tabs1_tabs">
+            <ul>
+              <li class="active hotels"><a href="#tabs-2">景点推荐</a></li>
+            </ul>
+        </div>
+        <div class="tabs_content tabs1_content">
+
+            <div id="tabs-1">
+              <form action="../resScenery/search" class="form1">
+                <div class="row">
+                  <div class="col-sm-4 col-md-2">
+                    <div class="form-group">
+                      <label for="inputName">景点地址：</label>
+                      <input type="text" class="form-control" style="width: 100%" id="inputName" name="address"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-2">
+                    <div class="select1_wrapper">
+                      <label>景点星级：</label>
+                      <div class="select1_inner">
+                        <select class="select2 select" style="width: 100%" name="star">
+                          <option value="">请选择</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-2">
+                    <div class="button1_wrapper">
+                      <button type="submit" class="btn-default btn-form1-submit">查询</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-4" th:each="item : ${page.content}">
+                      <div class="thumb4">
+                        <div class="thumbnail clearfix">
+                          <figure>
+                            <img name="sceneryImg" th:id="${item.img}"  width="200px" height="120px"/>
+                          </figure>
+                          <div class="caption">
+                            <div class="txt1" th:text="${item.title}"></div>
+                            <div class="txt3 clearfix">
+                              <div class="left_side">
+                                <div class="price" th:text="${item.price}"></div>
+                                <div class="nums" th:text="${item.address}"></div>
+                                <div class="nums" th:text="${item.day}"></div>
+                                <textarea cols="25" rows="3" th:id="'textarea'+${item.id}" placeholder="请输入评论内容。。。"></textarea>
+                              </div>
+                              <div class="right_side">
+                                <a href="#"  onclick="commitConmentView(this.name);"  th:name="${item.id}" class="btn-default btn1">提交评论</a>
+                                <a href="#" th:name="${item.id}" onclick="showComment(this.name);" class="btn-default btn1">查看评论</a>
+                                <a data-toggle='modal' th:name="${item.id}" onclick="showView(this.name);" class="btn-default btn1">查看详情</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" th:id="${item.id}">
+                        <div class="modal-dialog">
+                          <div class="modal-content message_align">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                              <h4 class="modal-title">详细信息</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="thumbnail clearfix">
+                                <div class="caption">
+                                  名称：<div class="txt1" th:text="${item.title}"></div>
+                                  <div class="txt3 clearfix">
+                                    <div class="left_side">
+                                      价格：<div class="price" th:text="${item.price}"></div>
+                                      星级：<div class="nums" th:text="${item.star}"></div>
+                                        地址：<div class="nums" th:text="${item.address}"></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default"  th:name="${item.id}" onclick="closeView(this.name)">取消</button>
+                            </div>
+                          </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                      </div>
+                      <div class="modal fade" th:id="conment_modal" role="dialog" aria-labelledby="replyModalLabel" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog" th:fragment="conment_div" >
+                          <div class="modal-content message_align">
+                            <div class="modal-header">
+                              <h4 class="modal-title">评论区</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="thumbnail clearfix" id="div-conment">
+
+                                <div class="caption" >
+
+                                <input  th:value="${session.username}" id="sessionName" type="hidden" />
+                                  <div th:if="${conments} ne null">
+                                    <ul th:each="conment : ${conments}">
+                                      <li th:text="${conment.name}+':'"></li>
+                                      <li th:text="${conment.conment}"></li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default"  onclick="closeConmentView()">取消</button>
+                                <!--<a  onclick="urlSubmit()" class="btn btn-success" data-dismiss="modal">确定</a>-->
+
+                            </div>
+                          </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                      </div>
+                    </div>
+                    <!--<div>
+                      <a th:href="@{/scenery/view(start=0)}">[首页]</a>
+                      <a th:if="${not page.isFirst()}" th:href="@{/scenery/view(start=${page.number-1})}">[上页]</a>
+                      <a th:if="${not page.isLast()}" th:href="@{/scenery/view(start=${page.number+1})}">[下页]</a>
+                      <a th:href="@{/scenery/view(start=${page.totalPages-1})}">[末页]</a>
+                    </div>-->
+                  </div>
+                  <div class="pager_wrapper">
+                    <ul class="pager clearfix">
+                      <li class="prev"><a th:if="${not page.isFirst()}" th:href="@{/resScenery/view(start=${page.number-1})}">上一页</a></li>
+                      <li class="next"><a th:if="${not page.isLast()}" th:href="@{/resScenery/view(start=${page.number+1})}">下一页</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <!-- 登录 -->
+  <div class="modal fade" id="login_modal">
+    <div class="modal-dialog">
+      <div class="modal-content message_align">
+        <form id="dologin" name="uploadForm" method="POST" class="form-horizontal" action="../desktop/login" role="form">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">用户登录</h4>
+          </div>
+          <div class="modal-body">
+            <div class="thumbnail clearfix">
+              <!--<div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">添加</h4>
+              </div>-->
+              <div class="modal-body">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label>用户名</label>
+                        <input class="form-control" placeholder="用户名" name="username" />
+                      </div>
+                      <div class="form-group">
+                        <label>密码</label>
+                        <input class="form-control" type="password" placeholder="密码" name="password" />
+                      </div>
+                      <div class="form-group" th:if="${session.state==0}">
+                        <label>错误信息</label>
+                        <p th:text="${error}"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="hidden" id="id" />
+            <button type="button" class="btn btn-default" onclick="closeModal()">取消</button>
+            <button type="submit" class="btn btn-primary">登录</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 注册 -->
+  <div class="modal fade" id="regist_modal">
+    <div class="modal-dialog">
+      <div class="modal-content message_align">
+        <form id="doregist" name="uploadForm" method="POST" class="form-horizontal" action="../index/regist" role="form">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">用户注册</h4>
+          </div>
+          <div class="modal-body">
+            <div class="thumbnail clearfix">
+              <!--<div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">添加</h4>
+              </div>-->
+              <div class="modal-body">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label>用户名</label>
+                        <input class="form-control" placeholder="用户名" name="regist_username" id="regist_username"/>
+                      </div>
+                      <div class="form-group">
+                        <label>密码</label>
+                        <input class="form-control" type="password" placeholder="密码" name="regist_password" id="regist_password"/>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" onclick="closeRegistModal()">取消</button>
+            <button type="button" class="btn btn-primary" onclick="regist()">注册</button>
+          </div>
+        </form>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<div class="bot2_wrapper">
+  <div class="container">
+    <div class="left_side">
+      Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href=""></a>
+    </div>
+    <div class="right_side"></div>
+  </div>
+</div>
+</div>
+<script src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript" src="../componets/business/scenery.js" ></script>
+<script type="text/javascript" src="../componets/business/index.js"></script>
+<script type="text/javascript" th:inline="javascript">
+  function showView(id) {
+    //console.log("open"+id);
+    $("#"+id).modal();
+  }
+  function closeView(id) {
+    $("#"+id).modal('hide');
+  }
+  function showComment(id) {
+    $("#conment_modal").modal({
+      remote:"../conment/getConmentList1/"+id}
+    )
+  }
+  //保存
+  function commitConmentView(id) {
+    debugger;
+    if(!$("#sessionName").val()){
+      alert("请先登录后再进行评论");
+      return;
+    }
+    if($("#textarea"+id).val()){
+      console.log("id");
+      console.log(id);
+      $.ajax({
+        url:"../conment/saveConment",
+        type:"POST",
+        data:{
+          sceneryId:id,
+          name:$("#sessionName").val(),
+          conment:$("#textarea"+id).val()
+        },
+        success:function(data){
+          alert("提交成功！");
+          $("#textarea"+id).val("");
+        }
+      })
+    }
+  }
+
+  function closeConmentView (){
+    $("#conment_modal").modal('hide');
+  }
+</script>
+</body>
+</html>

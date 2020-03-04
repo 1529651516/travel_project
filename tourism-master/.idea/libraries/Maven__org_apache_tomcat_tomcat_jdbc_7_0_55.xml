@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.tomcat:tomcat-jdbc:7.0.55">
+    <CLASSES>
+      <root url="jar://D:/software/maven3.6/mavenRepository/org/apache/tomcat/tomcat-jdbc/7.0.55/tomcat-jdbc-7.0.55.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/software/maven3.6/mavenRepository/org/apache/tomcat/tomcat-jdbc/7.0.55/tomcat-jdbc-7.0.55-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/software/maven3.6/mavenRepository/org/apache/tomcat/tomcat-jdbc/7.0.55/tomcat-jdbc-7.0.55-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
