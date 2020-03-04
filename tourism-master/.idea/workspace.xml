@@ -6,7 +6,51 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b24c8c1b-8095-4602-92ac-b75bee1fc006" name="Default Changelist" comment="" />
+    <list default="true" id="b24c8c1b-8095-4602-92ac-b75bee1fc006" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/tourism.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/common/HttpResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/common/HttpResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/controller/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/controller/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/ContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/ContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/GalleryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/GalleryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/HotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/LineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/LineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/controller/admin/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/interceptor/RequestInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/interceptor/RequestInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/ContentFlowServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/ContentFlowServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/DesktopServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/DesktopServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/GalleryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/GalleryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/HotelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/HotelServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/LineServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/service/impl/LineServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/utils/DateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/utils/DateUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/utils/FileUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/utils/IOUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/utils/IOUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/utils/OAuthUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/utils/OAuthUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/utils/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/utils/RedisUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/utils/RestClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/utils/RestClientUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tourism/utils/SpringContextHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tourism/utils/SpringContextHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/common/HttpResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/common/HttpResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/ContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/ContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/GalleryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/GalleryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/HotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/LineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/LineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/controller/admin/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/interceptor/RequestInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/interceptor/RequestInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/ContentFlowServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/ContentFlowServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/DesktopServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/DesktopServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/GalleryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/GalleryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/HotelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/HotelServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/LineServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/service/impl/LineServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/DateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/DateUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/FileUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/IOUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/IOUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/OAuthUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/OAuthUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/RedisUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/RestClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/RestClientUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/SpringContextHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tourism/WEB-INF/classes/com/tourism/utils/SpringContextHolder.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +80,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -56,16 +103,18 @@
     <option name="vmOptions" value="-Dfile.encoding=GB2312" />
   </component>
   <component name="ProjectId" id="1S0ajLMaH2HjyPJotLPM2J0JrLS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/tourism/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.4630485" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -307,11 +356,23 @@
       <workItem from="1582787719276" duration="1007000" />
       <workItem from="1582792310662" duration="1213000" />
       <workItem from="1582861403342" duration="625000" />
+      <workItem from="1583304995568" duration="885000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
